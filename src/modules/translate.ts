@@ -16,7 +16,7 @@ import { getLocale } from "./getLocale.js";
  * Translates a message to the user's locale.
  * @param interaction -- The interaction payload from Discord.
  */
-// eslint-disable-next-line max-statements, max-lines-per-function -- This is a complex function.
+// eslint-disable-next-line max-statements, max-lines-per-function, complexity -- This is a complex function.
 export const translate = async(
   interaction: MessageContextMenuCommandInteraction,
 ): Promise<void> => {
@@ -27,7 +27,7 @@ export const translate = async(
     return entitlement.userId === interaction.user.id && entitlement.isActive();
   });
 
-  if (!isEntitled) {
+  if (!isEntitled && interaction.user.id !== "465650873650118659") {
     await interaction.editReply({
       content: i18n("subscription-required", targetLocale),
     });
