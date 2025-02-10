@@ -5,6 +5,9 @@
  */
 
 import {
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
   MessageFlags,
   type MessageContextMenuCommandInteraction,
 } from "discord.js";
@@ -28,8 +31,15 @@ export const translate = async(
   });
 
   if (!isEntitled && interaction.user.id !== "465650873650118659") {
+    const subscribeButton = new ButtonBuilder().
+      setStyle(ButtonStyle.Premium).
+      setSKUId("1338596712121499669");
+    const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+      subscribeButton,
+    );
     await interaction.editReply({
-      content: i18n("subscription-required", targetLocale),
+      components: [ row ],
+      content:    i18n("subscription-required", targetLocale),
     });
     return;
   }

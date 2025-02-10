@@ -5,7 +5,7 @@
  */
 
 import { mappedLocales } from "../config/locales.js";
-import type { MessageContextMenuCommandInteraction } from "discord.js";
+import type { CommandInteraction } from "discord.js";
 
 /**
  * Parses the locale from the interaction, using our mapped
@@ -14,7 +14,7 @@ import type { MessageContextMenuCommandInteraction } from "discord.js";
  * @returns The locale string.
  */
 export const getLocale = (
-  interaction: MessageContextMenuCommandInteraction,
+  interaction: CommandInteraction,
 ): string => {
   if (mappedLocales[interaction.locale] !== undefined) {
     // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- It's not undefined.
