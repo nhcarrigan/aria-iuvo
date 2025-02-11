@@ -3,11 +3,14 @@
  * @license Naomi's Public License
  * @author Naomi Carrigan
  */
-import { i18n } from "./i18n.js";
-import type {
-  ChatInputCommandInteraction,
-  MessageContextMenuCommandInteraction,
+import {
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  type ChatInputCommandInteraction,
+  type MessageContextMenuCommandInteraction,
 } from "discord.js";
+import { i18n } from "./i18n.js";
 
 /**
  * Responds to an interaction with a generic error message.
@@ -20,9 +23,20 @@ export const replyToError = async(
     | MessageContextMenuCommandInteraction,
   locale: string,
 ): Promise<void> => {
+  const button = new ButtonBuilder().
+    setLabel(i18n("button.support", locale)).
+    setStyle(ButtonStyle.Link).
+    setURL("https://chat.nhcarrigan.com");
+  const row = new ActionRowBuilder<ButtonBuilder>().addComponents(button);
   if (interaction.deferred || interaction.replied) {
-    await interaction.editReply(i18n("command-error", locale));
+    await interaction.editReply({
+      components: [ row ],
+      content:    i18n("command-error", locale),
+    });
     return;
   }
-  await interaction.reply(i18n("command-error", locale));
+  await interaction.reply({
+    components: [ row ],
+    content:    i18n("command-error", locale),
+  });
 };
