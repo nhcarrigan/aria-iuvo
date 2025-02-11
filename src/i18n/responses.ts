@@ -9,13 +9,14 @@
 /* eslint-disable max-lines  -- massive chonky boi*/
 import { Locale } from "discord.js";
 
-export const responses: Record<string, { "no-message-content": string; "subscription-required": string; "translation": string; "unsupported-locale": string; "embed": { title: string; description: string; commit: string; version: string }; "button": { support: string; code: string } }> = {
+export const responses: Record<string, { "no-message-content": string; "subscription-required": string; "translation": string; "unsupported-locale": string; "embed": { title: string; description: string; commit: string; version: string }; "button": { support: string; code: string }; "command-error": string }> = {
   en: {
     "button": {
       code:    "Source code",
       support: "Need help?",
     },
-    "embed": {
+    "command-error": "An error occurred while running this command.",
+    "embed":         {
       commit:      "Current Commit",
       description: "Aria Iuvo is a Discord bot that uses LibreTranslate to provide translations for messages. She is developed by NHCarrigan. To use the bot, right click on a message, select `Apps`, then select `Translate message`!",
       title:       "About Aria Iuvo",
@@ -33,7 +34,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Kode sumber",
       support: "Butuh bantuan?",
     },
-    "embed": {
+    "command-error": "Terjadi kesalahan saat menjalankan perintah ini.",
+    "embed":         {
       commit:      "Commit Saat Ini",
       description: "Aria Iuvo adalah bot Discord yang menggunakan LibreTranslate untuk menyediakan terjemahan pesan. Dia dikembangkan oleh NHCarrigan. Untuk menggunakan bot, klik kanan pada pesan, pilih `Apps`, lalu pilih `Translate message`!",
       title:       "Tentang Aria Iuvo",
@@ -49,7 +51,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Código fuente",
       support: "¿Necesitas ayuda?",
     },
-    "embed": {
+    "command-error": "Se produjo un error al ejecutar este comando.",
+    "embed":         {
       commit:      "Commit Actual",
       description: "Aria Iuvo es un bot de Discord que usa LibreTranslate para proporcionar traducciones de mensajes. Está desarrollada por NHCarrigan. Para usar el bot, haz clic derecho en un mensaje, selecciona `Apps`, ¡luego selecciona `Translate message`!",
       title:       "Sobre Aria Iuvo",
@@ -65,7 +68,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Código fonte",
       support: "Precisa de ajuda?",
     },
-    "embed": {
+    "command-error": "Ocorreu um erro ao executar este comando.",
+    "embed":         {
       commit:      "Commit Atual",
       description: "Aria Iuvo é um bot do Discord que usa LibreTranslate para fornecer traduções de mensagens. Ela é desenvolvida por NHCarrigan. Para usar o bot, clique com o botão direito em uma mensagem, selecione `Apps`, depois selecione `Translate message`!",
       title:       "Sobre Aria Iuvo",
@@ -81,7 +85,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Zdrojový kód",
       support: "Potřebujete pomoc?",
     },
-    "embed": {
+    "command-error": "Při spuštění tohoto příkazu došlo k chybě.",
+    "embed":         {
       commit:      "Aktuální Commit",
       description: "Aria Iuvo je Discord bot, který používá LibreTranslate k poskytování překladů zpráv. Je vyvíjena NHCarriganem. Pro použití bota klikněte pravým tlačítkem na zprávu, vyberte `Apps`, pak vyberte `Translate message`!",
       title:       "O Aria Iuvo",
@@ -97,7 +102,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Kildekode",
       support: "Brug for hjælp?",
     },
-    "embed": {
+    "command-error": "Der opstod en fejl under kørslen af denne kommando.",
+    "embed":         {
       commit:      "Nuværende Commit",
       description: "Aria Iuvo er en Discord bot, der bruger LibreTranslate til at levere oversættelser af beskeder. Hun er udviklet af NHCarrigan. For at bruge botten, højreklik på en besked, vælg `Apps`, vælg derefter `Translate message`!",
       title:       "Om Aria Iuvo",
@@ -113,7 +119,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Broncode",
       support: "Hulp nodig?",
     },
-    "embed": {
+    "command-error": "Er is een fout opgetreden bij het uitvoeren van dit commando.",
+    "embed":         {
       commit:      "Huidige Commit",
       description: "Aria Iuvo is een Discord bot die LibreTranslate gebruikt om vertalingen voor berichten te verzorgen. Ze is ontwikkeld door NHCarrigan. Om de bot te gebruiken, klik met de rechtermuisknop op een bericht, selecteer `Apps`, selecteer vervolgens `Translate message`!",
       title:       "Over Aria Iuvo",
@@ -129,7 +136,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Lähdekoodi",
       support: "Tarvitsetko apua?",
     },
-    "embed": {
+    "command-error": "Tapahtui virhe suorittaessa tätä komentoa.",
+    "embed":         {
       commit:      "Nykyinen Commit",
       description: "Aria Iuvo on Discord-botti, joka käyttää LibreTranslatea viestien kääntämiseen. Sen on kehittänyt NHCarrigan. Käyttääksesi bottia, napsauta hiiren oikealla painikkeella viestiä, valitse `Apps`, sitten valitse `Translate message`!",
       title:       "Tietoja Aria Iuvosta",
@@ -145,7 +153,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Code source",
       support: "Besoin d'aide ?",
     },
-    "embed": {
+    "command-error": "Une erreur s'est produite lors de l'exécution de cette commande.",
+    "embed":         {
       commit:      "Commit Actuel",
       description: "Aria Iuvo est un bot Discord qui utilise LibreTranslate pour fournir des traductions de messages. Elle est développée par NHCarrigan. Pour utiliser le bot, faites un clic droit sur un message, sélectionnez `Apps`, puis sélectionnez `Translate message` !",
       title:       "À propos d'Aria Iuvo",
@@ -161,7 +170,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Quellcode",
       support: "Hilfe benötigt?",
     },
-    "embed": {
+    "command-error": "Beim Ausführen dieses Befehls ist ein Fehler aufgetreten.",
+    "embed":         {
       commit:      "Aktueller Commit",
       description: "Aria Iuvo ist ein Discord-Bot, der LibreTranslate verwendet, um Übersetzungen für Nachrichten bereitzustellen. Sie wurde von NHCarrigan entwickelt. Um den Bot zu verwenden, klicken Sie mit der rechten Maustaste auf eine Nachricht, wählen Sie `Apps` und dann `Translate message`!",
       title:       "Über Aria Iuvo",
@@ -177,7 +187,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Πηγαίος κώδικας",
       support: "Χρειάζεστε βοήθεια;",
     },
-    "embed": {
+    "command-error": "Παρουσιάστηκε σφάλμα κατά την εκτέλεση αυτής της εντολής.",
+    "embed":         {
       commit:      "Τρέχον Commit",
       description: "Η Aria Iuvo είναι ένα bot Discord που χρησιμοποιεί το LibreTranslate για να παρέχει μεταφράσεις μηνυμάτων. Αναπτύχθηκε από τον NHCarrigan. Για να χρησιμοποιήσετε το bot, κάντε δεξί κλικ σε ένα μήνυμα, επιλέξτε `Apps`, στη συνέχεια επιλέξτε `Translate message`!",
       title:       "Σχετικά με την Aria Iuvo",
@@ -193,7 +204,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "सोर्स कोड",
       support: "मदद चाहिए?",
     },
-    "embed": {
+    "command-error": "इस कमांड को चलाते समय एक त्रुटि आई।",
+    "embed":         {
       commit:      "वर्तमान कमिट",
       description: "Aria Iuvo एक Discord बॉट है जो संदेशों के अनुवाद के लिए LibreTranslate का उपयोग करती है। इसे NHCarrigan द्वारा विकसित किया गया है। बॉट का उपयोग करने के लिए, किसी संदेश पर राइट क्लिक करें, `Apps` चुनें, फिर `Translate message` चुनें!",
       title:       "Aria Iuvo के बारे में",
@@ -209,7 +221,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Forráskód",
       support: "Segítségre van szüksége?",
     },
-    "embed": {
+    "command-error": "Hiba történt a parancs futtatása közben.",
+    "embed":         {
       commit:      "Jelenlegi Commit",
       description: "Az Aria Iuvo egy Discord bot, amely a LibreTranslate-et használja üzenetek fordításához. NHCarrigan fejlesztette. A bot használatához kattintson jobb gombbal egy üzenetre, válassza az `Apps` lehetőséget, majd válassza a `Translate message` opciót!",
       title:       "Az Aria Iuvoról",
@@ -225,7 +238,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Codice sorgente",
       support: "Hai bisogno di aiuto?",
     },
-    "embed": {
+    "command-error": "Si è verificato un errore durante l'esecuzione di questo comando.",
+    "embed":         {
       commit:      "Commit Attuale",
       description: "Aria Iuvo è un bot Discord che utilizza LibreTranslate per fornire traduzioni dei messaggi. È sviluppata da NHCarrigan. Per utilizzare il bot, fai clic destro su un messaggio, seleziona `Apps`, quindi seleziona `Translate message`!",
       title:       "Informazioni su Aria Iuvo",
@@ -241,7 +255,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "ソースコード",
       support: "サポートが必要ですか？",
     },
-    "embed": {
+    "command-error": "このコマンドの実行中にエラーが発生しました。",
+    "embed":         {
       commit:      "現在のコミット",
       description: "Aria Iuvoは、LibreTranslateを使用してメッセージの翻訳を提供するDiscordボットです。NHCarriganによって開発されました。ボットを使用するには、メッセージを右クリックし、`Apps`を選択し、`Translate message`を選択してください！",
       title:       "Aria Iuvoについて",
@@ -257,7 +272,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "소스 코드",
       support: "도움이 필요하신가요?",
     },
-    "embed": {
+    "command-error": "이 명령을 실행하는 중에 오류가 발생했습니다.",
+    "embed":         {
       commit:      "현재 커밋",
       description: "Aria Iuvo는 LibreTranslate를 사용하여 메시지 번역을 제공하는 Discord 봇입니다. NHCarrigan이 개발했습니다. 봇을 사용하려면 메시지를 마우스 오른쪽 버튼으로 클릭하고 `Apps`를 선택한 다음 `Translate message`를 선택하세요!",
       title:       "Aria Iuvo 소개",
@@ -273,7 +289,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Išeities kodas",
       support: "Reikia pagalbos?",
     },
-    "embed": {
+    "command-error": "Vykstant šiai komandai įvyko klaida.",
+    "embed":         {
       commit:      "Dabartinis Commit",
       description: "Aria Iuvo yra Discord botas, naudojantis LibreTranslate žinučių vertimams. Ją sukūrė NHCarrigan. Norėdami naudoti botą, dešiniuoju pelės klavišu spustelėkite žinutę, pasirinkite `Apps`, tada pasirinkite `Translate message`!",
       title:       "Apie Aria Iuvo",
@@ -289,7 +306,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Kod źródłowy",
       support: "Potrzebujesz pomocy?",
     },
-    "embed": {
+    "command-error": "Wystąpił błąd podczas wykonywania tej komendy.",
+    "embed":         {
       commit:      "Aktualny Commit",
       description: "Aria Iuvo to bot Discord, który używa LibreTranslate do tłumaczenia wiadomości. Została stworzona przez NHCarrigan. Aby użyć bota, kliknij prawym przyciskiem myszy na wiadomość, wybierz `Apps`, następnie wybierz `Translate message`!",
       title:       "O Aria Iuvo",
@@ -305,7 +323,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Källkod",
       support: "Behöver du hjälp?",
     },
-    "embed": {
+    "command-error": "Ett fel uppstod när denna kommando kördes.",
+    "embed":         {
       commit:      "Nuvarande Commit",
       description: "Aria Iuvo är en Discord-bot som använder LibreTranslate för att tillhandahålla översättningar av meddelanden. Hon är utvecklad av NHCarrigan. För att använda boten, högerklicka på ett meddelande, välj `Apps`, välj sedan `Translate message`!",
       title:       "Om Aria Iuvo",
@@ -321,7 +340,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Cod sursă",
       support: "Aveți nevoie de ajutor?",
     },
-    "embed": {
+    "command-error": "A apărut o eroare la rularea acestei comenzi.",
+    "embed":         {
       commit:      "Commit Curent",
       description: "Aria Iuvo este un bot Discord care folosește LibreTranslate pentru a furniza traduceri pentru mesaje. Este dezvoltat de NHCarrigan. Pentru a folosi botul, faceți clic dreapta pe un mesaj, selectați `Apps`, apoi selectați `Translate message`!",
       title:       "Despre Aria Iuvo",
@@ -337,7 +357,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Исходный код",
       support: "Нужна помощь?",
     },
-    "embed": {
+    "command-error": "При выполнении этой команды произошла ошибка.",
+    "embed":         {
       commit:      "Текущий Коммит",
       description: "Aria Iuvo - это Discord бот, использующий LibreTranslate для перевода сообщений. Разработан NHCarrigan. Чтобы использовать бота, щелкните правой кнопкой мыши по сообщению, выберите `Apps`, затем выберите `Translate message`!",
       title:       "О Aria Iuvo",
@@ -353,7 +374,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "源代码",
       support: "需要帮助？",
     },
-    "embed": {
+    "command-error": "运行此命令时发生错误。",
+    "embed":         {
       commit:      "当前提交",
       description: "Aria Iuvo是一个使用LibreTranslate提供消息翻译的Discord机器人。由NHCarrigan开发。要使用机器人，右键点击消息，选择`Apps`，然后选择`Translate message`！",
       title:       "关于Aria Iuvo",
@@ -369,7 +391,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "原始碼",
       support: "需要幫助？",
     },
-    "embed": {
+    "command-error": "執行此命令時發生錯誤。",
+    "embed":         {
       commit:      "當前提交",
       description: "Aria Iuvo是一個使用LibreTranslate提供訊息翻譯的Discord機器人。由NHCarrigan開發。要使用機器人，右鍵點擊訊息，選擇`Apps`，然後選擇`Translate message`！",
       title:       "關於Aria Iuvo",
@@ -385,7 +408,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "ซอร์สโค้ด",
       support: "ต้องการความช่วยเหลือ?",
     },
-    "embed": {
+    "command-error": "เกิดข้อผิดพลาดขณะดำเนินการคำสั่งนี้",
+    "embed":         {
       commit:      "คอมมิตปัจจุบัน",
       description: "Aria Iuvo เป็นบอท Discord ที่ใช้ LibreTranslate เพื่อแปลข้อความ พัฒนาโดย NHCarrigan ในการใช้บอท ให้คลิกขวาที่ข้อความ เลือก `Apps` จากนั้นเลือก `Translate message`!",
       title:       "เกี่ยวกับ Aria Iuvo",
@@ -401,7 +425,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Kaynak kodu",
       support: "Yardıma mı ihtiyacınız var?",
     },
-    "embed": {
+    "command-error": "Bu komutu çalıştırırken bir hata oluştu.",
+    "embed":         {
       commit:      "Mevcut Commit",
       description: "Aria Iuvo, mesajlar için çeviri sağlamak üzere LibreTranslate kullanan bir Discord botudur. NHCarrigan tarafından geliştirilmiştir. Botu kullanmak için, bir mesaja sağ tıklayın, `Apps`'i seçin, ardından `Translate message`'ı seçin!",
       title:       "Aria Iuvo Hakkında",
@@ -417,7 +442,8 @@ export const responses: Record<string, { "no-message-content": string; "subscrip
       code:    "Вихідний код",
       support: "Потрібна допомога?",
     },
-    "embed": {
+    "command-error": "Під час виконання цієї команди сталася помилка.",
+    "embed":         {
       commit:      "Поточний Коміт",
       description: "Aria Iuvo - це Discord бот, який використовує LibreTranslate для перекладу повідомлень. Розроблений NHCarrigan. Щоб використовувати бота, клацніть правою кнопкою миші на повідомленні, виберіть `Apps`, потім виберіть `Translate message`!",
       title:       "Про Aria Iuvo",

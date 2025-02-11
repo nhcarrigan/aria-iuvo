@@ -7,7 +7,23 @@ import { Client, Events } from "discord.js";
 import { about } from "./modules/about.js";
 import { translate } from "./modules/translate.js";
 import { instantiateServer } from "./server/serve.js";
-import { logHandler } from "./utils/logHandler.js";
+import { logger } from "./utils/logger.js";
+
+process.on("unhandledRejection", (error) => {
+  if (error instanceof Error) {
+    void logger.error("Unhandled Rejection", error);
+    return;
+  }
+  void logger.error("unhandled rejection", new Error(String(error)));
+});
+
+process.on("uncaughtException", (error) => {
+  if (error instanceof Error) {
+    void logger.error("Uncaught Exception", error);
+    return;
+  }
+  void logger.error("uncaught exception", new Error(String(error)));
+});
 
 const client = new Client({
   intents: [],
@@ -22,8 +38,16 @@ client.on(Events.InteractionCreate, (interaction) => {
   }
 });
 
+client.on(Events.EntitlementCreate, (entitlement) => {
+  void logger.log("info", `User ${entitlement.userId} has subscribed!`);
+});
+
+client.on(Events.EntitlementDelete, (entitlement) => {
+  void logger.log("info", `User ${entitlement.userId} has unsubscribed... :c`);
+});
+
 client.on(Events.ClientReady, () => {
-  logHandler.info("Bot is ready.");
+  void logger.log("debug", "Bot is ready.");
 });
 
 instantiateServer();

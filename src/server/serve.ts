@@ -5,7 +5,7 @@
  */
 
 import fastify from "fastify";
-import { logHandler } from "../utils/logHandler.js";
+import { logger } from "../utils/logger.js";
 
 const html = `<!DOCTYPE html>
 <html>
@@ -60,12 +60,16 @@ export const instantiateServer = (): void => {
 
     server.listen({ port: 5001 }, (error) => {
       if (error) {
-        logHandler.error(error);
+        void logger.error("instantiate server", error);
         return;
       }
-      logHandler.info("Server listening on port 5001.");
+      void logger.log("debug", "Server listening on port 5001.");
     });
   } catch (error) {
-    logHandler.error(error);
+    if (error instanceof Error) {
+      void logger.error("instantiate server", error);
+      return;
+    }
+    void logger.error("instantiate server", new Error(String(error)));
   }
 };
