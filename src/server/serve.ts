@@ -19,6 +19,7 @@ const html = `<!DOCTYPE html>
   <body>
     <main>
     <h1>Aria Iuvo</h1>
+    <img src="https://cdn.nhcarrigan.com/new-avatars/aria-full.png" width="250" alt="Aria" />
     <section>
       <p>Bot to translate your messages on Discord!</p>
     </section>
