@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nhcarrigan/discord-analytics':
-        specifier: 0.0.5
-        version: 0.0.5(@nhcarrigan/logger@1.1.1)(discord.js@14.18.0)
+        specifier: 0.0.6
+        version: 0.0.6(@nhcarrigan/logger@1.1.1)(discord.js@14.18.0)
       '@nhcarrigan/logger':
         specifier: 1.1.1
         version: 1.1.1
@@ -415,8 +415,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@nhcarrigan/discord-analytics@0.0.5':
-    resolution: {integrity: sha512-dxkXFB/o12AEPWGmv2/d+rQYZ+rzm1tkW9gjeVs/8JMadk+gDIDlSdOlWZrov/VhQGWLpHJFfZD2Y9qcnPf8kg==}
+  '@nhcarrigan/discord-analytics@0.0.6':
+    resolution: {integrity: sha512-Mci/zSY2nE24BM2cZx5EiYqwpRTTCBznFfs2BphejzDAaWPt1P12V5ln7OSUbFLGhvTD/Qwi0za3yPv6shQLoA==}
     peerDependencies:
       '@nhcarrigan/logger': '>=1.1.0-hotfix'
       discord.js: ^14.0.0
@@ -2748,7 +2748,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@nhcarrigan/discord-analytics@0.0.5(@nhcarrigan/logger@1.1.1)(discord.js@14.18.0)':
+  '@nhcarrigan/discord-analytics@0.0.6(@nhcarrigan/logger@1.1.1)(discord.js@14.18.0)':
     dependencies:
       '@nhcarrigan/logger': 1.1.1
       discord.js: 14.18.0
