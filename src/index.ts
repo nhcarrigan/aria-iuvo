@@ -3,6 +3,7 @@
  * @license Naomi's Public License
  * @author Naomi Carrigan
  */
+import { DiscordAnalytics } from "@nhcarrigan/discord-analytics";
 import { Client, Events } from "discord.js";
 import { about } from "./modules/about.js";
 import { translate } from "./modules/translate.js";
@@ -29,7 +30,10 @@ const client = new Client({
   intents: [],
 });
 
+const analytics = new DiscordAnalytics(client, logger);
+
 client.on(Events.InteractionCreate, (interaction) => {
+  void analytics.logGatewayEvent(Events.InteractionCreate, { ...interaction });
   if (interaction.isMessageContextMenuCommand()) {
     void translate(interaction);
   }
@@ -48,6 +52,7 @@ client.on(Events.EntitlementDelete, (entitlement) => {
 
 client.on(Events.ClientReady, () => {
   void logger.log("debug", "Bot is ready.");
+  analytics.startCron();
 });
 
 instantiateServer();

@@ -111,6 +111,11 @@ export const translate = async(
         translation: translation.translatedText,
       }),
     });
+    await logger.metric("translation", 1, {
+      locale:       targetLocale,
+      sourceLocale: sourceLocale?.language ?? "default to en",
+      user:         interaction.user.id,
+    });
   } catch (error) {
     const targetLocale = getLocale(interaction);
     await replyToError(interaction, targetLocale);
